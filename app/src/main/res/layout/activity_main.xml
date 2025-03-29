@@ -10,14 +10,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--TextView
-        android:text="Store Chincha"
-        android:layout_gravity="center|top"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-    </TextView-->
-
     <Button
         android:id="@+id/btnActRegistrar"
         android:text="Registrar"
@@ -27,6 +19,12 @@
     <Button
         android:id="@+id/btnActListar"
         android:text="Listar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnActBuscar"
+        android:text="Buscar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

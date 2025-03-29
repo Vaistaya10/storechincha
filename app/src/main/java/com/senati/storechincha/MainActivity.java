@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnActListar, btnActRegistrar;
+    Button btnActListar, btnActRegistrar, btnActBuscar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,21 +34,30 @@ public class MainActivity extends AppCompatActivity {
                 openActivity(registrar.class);
             }
         });
+
         btnActListar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openActivity(listar.class);
             }
         });
+
+        btnActBuscar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity(buscar.class);
+            }
+        });
     }
 
-    private void openActivity (Class myClass){
-        Intent intent = new Intent(getApplicationContext(),myClass);
+    private void openActivity(Class<?> myClass) {
+        Intent intent = new Intent(getApplicationContext(), myClass);
         startActivity(intent);
     }
 
-    private void loadUI(){
+    private void loadUI() {
         btnActListar = findViewById(R.id.btnActListar);
         btnActRegistrar = findViewById(R.id.btnActRegistrar);
+        btnActBuscar = findViewById(R.id.btnActBuscar);
     }
 }
